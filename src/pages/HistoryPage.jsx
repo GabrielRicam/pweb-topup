@@ -14,11 +14,9 @@ export default function HistoryPage() {
     <div className="min-h-screen bg-gray-900 text-white p-6">
       <h1 className="text-2xl font-bold mb-4">Riwayat Pembelian</h1>
 
-      {!history.length ? (
         <p className="flex items-center">Belum ada transaksi.</p>
       ) : (
-        <div className="flex flex-col gap-4">
-          {history.map((order) => (
+        <div className="flex flex-col-reverse gap-4">
             <div
               key={order.id}
               className="bg-gray-800 p-4 rounded-xl border border-gray-700 relative"
@@ -65,7 +63,6 @@ export default function HistoryPage() {
             </div>
           ))}
         </div>
-      )}
     </div>
   );
 }
