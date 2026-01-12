@@ -14,7 +14,7 @@ export default function App() {
   // ============================
   const [game, setGame] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:8000/api/games.php")
+    fetch("/api/games.php")
       .then(res => res.json())
       .then(data => {
         setGame(data);

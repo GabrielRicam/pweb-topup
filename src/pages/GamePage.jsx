@@ -42,7 +42,7 @@ export default function GamePage({ games }) {
       status: "pending",
     };
 
-    fetch("http://localhost:8000/api/transaction.php", {
+    fetch("/api/transaction.php", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(order),

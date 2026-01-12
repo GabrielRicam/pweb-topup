@@ -4,7 +4,7 @@ export default function HistoryPage() {
   const [history, setHistory] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8000/api/history.php")
+    fetch("/api/history.php")
       .then((res) => res.json())
       .then((data) => setHistory(data))
       .catch((err) => console.error("Fetch error:", err));
